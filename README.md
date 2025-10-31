@@ -1,16 +1,40 @@
-# React + Vite
+# 🌵 ZAGARO Official Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> _"A desert where knowledge takes root."_  
+> サークル **ZAGARO** の公式サイト。  
+> 「情報を伝える」よりも「世界観を体験させる」ことを目的とした、印象重視・アニメーション主体のブランディングサイト。
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 コンセプト
 
-## React Compiler
+このサイトは、サークルの活動内容を説明するための情報サイトではなく、  
+**「ZAGAROとは何か」を体験的に感じてもらうためのブランドサイト** です。  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+砂漠・風・光・成長といったモチーフを通して、  
+このサークルの雰囲気を伝えます。
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🌐 サイトの立ち位置
+
+| 役割 | 説明 |
+|------|------|
+| **ブランドの「顔」** | 第一印象でZAGAROの雰囲気を伝える |
+| **世界観の表現** | 映像的なモーションを通して体験させる |
+| **SNS・外部媒体への導線** | 活動報告などはX（旧Twitter）やNotion等に分離 |
+
+---
+
+## 🧩 技術スタック選定理由
+
+### ✅ **Vite + React**
+演出やインタラクションの試作・検証を最優先にするため、  
+**軽量・即時反映・構築の柔軟性が高いVite** を採用。
+
+| 観点 | Vite + React を選んだ理由 |
+|------|----------------------------|
+| **パフォーマンス** | ホットリロードが非常に高速。ビルドも軽量。 |
+| **開発体験** | デザイナー/学生メンバーでも理解しやすい構成。 |
+| **演出自由度** | Framer Motion / GSAP / Three.js / Lenis などを制約なく統合可能。 |
+| **ホスティング適性** | 完全静的サイトとして `GitHub Pages` にデプロイ可能。 |
