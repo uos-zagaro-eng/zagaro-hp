@@ -1,4 +1,12 @@
-export const members = [
+export interface Member {
+  id: number;
+  name: string;
+  role: string;
+  track: 'AI' | 'Web';
+  comment?: string;
+}
+
+export const members: Member[] = [
   {
     id: 1,
     name: '高見 陸太',
@@ -18,4 +26,3 @@ export const members = [
     track: 'Web',
   },
 ];
-

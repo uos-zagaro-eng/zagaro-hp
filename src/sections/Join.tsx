@@ -1,14 +1,16 @@
-import Section from '../components/Section';
-import Button from '../components/Button';
+import Section from "../components/Section";
+import Button from "../components/Button";
 
 export default function Join() {
   return (
     <Section id="join" className="relative bg-white/40">
       <div className="relative">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">Join Us</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
+            Join Us
+          </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-primary via-accent to-primary-light mx-auto mb-8 rounded-full"></div>
-          
+
           <p className="text-xl md:text-2xl text-slate-800 mb-6 font-semibold">
             メンバー募集中！
           </p>
@@ -47,4 +49,3 @@ export default function Join() {
     </Section>
   );
 }
-

@@ -1,21 +1,29 @@
-import { useState } from 'react';
+import { useState } from "react";
+
+interface MenuItem {
+  label: string;
+  href: string;
+}
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  const menuItems = [
-    { label: 'About', href: '#about' },
-    { label: 'Plan', href: '#plan' },
-    { label: 'Tracks', href: '#tracks' },
-    { label: 'Members', href: '#members' },
-    { label: 'Join', href: '#join' },
+  const menuItems: MenuItem[] = [
+    { label: "About", href: "#about" },
+    { label: "Plan", href: "#plan" },
+    { label: "Tracks", href: "#tracks" },
+    { label: "Members", href: "#members" },
+    { label: "Join", href: "#join" },
   ];
 
-  const handleClick = (e, href) => {
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     e.preventDefault();
     setIsOpen(false);
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -78,4 +86,3 @@ export default function Nav() {
     </>
   );
 }
-

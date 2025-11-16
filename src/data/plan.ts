@@ -1,4 +1,11 @@
-export const plan = [
+export interface PlanItem {
+  id: number;
+  title: string;
+  frequency: string;
+  description: string;
+}
+
+export const plan: PlanItem[] = [
   {
     id: 1,
     title: 'LT会',
@@ -48,4 +55,3 @@ export const plan = [
     description: '他大学・企業との合同イベント企画',
   },
 ];
-

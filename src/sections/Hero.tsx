@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
-import Button from '../components/Button';
+import { useEffect, useRef, useState } from "react";
+import Button from "../components/Button";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,19 +33,23 @@ export default function Hero() {
       className="min-h-screen w-full flex items-center justify-center relative overflow-hidden"
     >
       {/* 背景画像 - 全画面 */}
-      <div 
+      <div
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/alberto-rudolphi-YTc2kHz5L9s-unsplash.jpg)'
+          backgroundImage: "url(/alberto-rudolphi-YTc2kHz5L9s-unsplash.jpg)",
         }}
       ></div>
-      
+
       {/* オーバーレイ - 画像の上に軽いグラデーション */}
       <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-white/20 via-transparent to-white/30"></div>
       <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/10 via-transparent to-transparent"></div>
-      
+
       {/* コンテンツ - 中央配置、幅制限なし */}
-      <div className={`relative z-10 w-full text-center px-4 md:px-8 fade-in ${isVisible ? 'visible' : ''}`}>
+      <div
+        className={`relative z-10 w-full text-center px-4 md:px-8 fade-in ${
+          isVisible ? "visible" : ""
+        }`}
+      >
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary-light bg-clip-text text-transparent drop-shadow-lg">
             ZAGARO
@@ -90,4 +94,3 @@ export default function Hero() {
     </section>
   );
 }
-
