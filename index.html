@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ZAGARO - Implementation of Imagination</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;600;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Noto Sans JP', sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .font-syncopate {
+        font-family: 'Syncopate', sans-serif;
+      }
+      .font-bodoni {
+        font-family: 'Bodoni Moda', serif;
+      }
+      /* Smooth scrolling for the whole page */
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Hide scrollbar for chrome/safari/opera */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+      
+      .writing-vertical {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+      }
+
+      @keyframes fade-in-up {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up 1s ease-out forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-stone-50 text-stone-900 antialiased selection:bg-black selection:text-white">
+    <div id="root"></div>
+  </body>
+</html>
