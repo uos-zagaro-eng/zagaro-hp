@@ -19,7 +19,7 @@ export const IMAGE_URLS = {
     "https://www.transparenttextures.com/patterns/carbon-fibre.png",
   CUBES_PATTERN:
     "https://www.transparenttextures.com/patterns/cubes.png",
-  LOGO: "/zagaro_icon-min.png",
-  CTA_BACKGROUND: "/premium_photo-1675430784585-f77b590cb872.jpg",
+  LOGO: "./zagaro_icon-min.png",
+  CTA_BACKGROUND: "./premium_photo-1675430784585-f77b590cb872.jpg",
 } as const;
 
