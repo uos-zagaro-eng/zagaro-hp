@@ -7,8 +7,7 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
       // GitHub Pages uses a subpath: https://<username>.github.io/<repo>/
-      // Change 'hp-1' to your actual repository name
-      base: mode === 'production' ? '/hp-1/' : '/',
+      base: mode === 'production' ? '/zagaro-hp/' : '/',
       server: {
         port: 3000,
         host: '0.0.0.0',
