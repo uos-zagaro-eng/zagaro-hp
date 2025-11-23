@@ -17,7 +17,7 @@ export interface Activity {
   id: string;
   title: string;
   date: string;
-  image: string;
+  icon: IconName;
   description: string;
 }
 
@@ -29,8 +29,16 @@ export interface Project {
   image: string;
 }
 
-export interface ChatMessage {
-  id: string;
-  role: 'user' | 'model';
-  text: string;
-}
+/**
+ * アイコン名の型定義
+ */
+export type IconName =
+  | "Mic"
+  | "Coffee"
+  | "GraduationCap"
+  | "BookOpen"
+  | "UserRound"
+  | "CalendarRange"
+  | "Globe"
+  | "Users"
+  | "Tent";

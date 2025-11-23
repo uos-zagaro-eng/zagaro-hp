@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Syncopate';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-display: swap;
+}
+
+/* Custom animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+}
+
+/* Vertical writing */
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Font utilities */
+.font-syncopate {
+  font-family: 'Syncopate', sans-serif;
+}
+
+.font-bodoni {
+  font-family: 'Bodoni Moda', serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
