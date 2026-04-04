@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+/**
+ * カラーシステム（視認性 + さわやか・カジュアル）
+ * ベージュくすみを抑え、ミント／シアン系の清涼感を足す
+ */
+@theme {
+  --font-sans: "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "M PLUS Rounded 1c", "Noto Sans JP", sans-serif;
+
+  /* 背景：ほんのりミントの白に近いトーン */
+  --color-page: #f0faf9;
+  --color-card: #ffffff;
+  --color-subtle: #dff3f0;
+
+  /* テキスト：ややクールめのチャコールで爽やかさと可読性の両立 */
+  --color-ink: #15201e;
+  --color-ink-secondary: #2f3d3a;
+  --color-ink-muted: #4a5c57;
+
+  /* ボーダー：グレージュではなくミントグレー */
+  --color-line: #8ebfb5;
+  --color-line-faint: #c8e8e1;
+
+  /* ブランド：明るめティール（くすみを避ける） */
+  --color-brand: #0d9488;
+  --color-brand-hover: #0f766e;
+  --color-brand-active: #115e59;
+  --color-brand-soft: #7ee0d4;
+  --color-brand-muted: #d9f7f3;
+  --color-on-brand: #ffffff;
+
+  /* チップ：レモン＆サンシャイン（カジュアル） */
+  --color-chip: #fff9c4;
+  --color-chip-ink: #6b4f0a;
+  --color-chip-ring: #facc15;
+
+  /* プライマリ周りのキラッとしたリング用 */
+  --color-pop-ring: #a5f3fc;
+
+  /* 互換エイリアス */
+  --color-surface: var(--color-page);
+  --color-surface-elevated: var(--color-card);
+  --color-accent: var(--color-brand);
+  --color-accent-hover: var(--color-brand-hover);
+  --color-accent-soft: var(--color-brand-soft);
+  --color-accent-muted: var(--color-brand-muted);
+  --color-honey: var(--color-chip);
+}
+
+@layer base {
+  :root {
+    --shadow-soft: 0 8px 30px -6px rgb(13 148 136 / 0.1);
+    --shadow-soft-hover: 0 18px 44px -10px rgb(13 148 136 / 0.16);
+    --shadow-sticker: 3px 3px 0 rgb(94 200 186 / 0.55);
+    --ease-out-soft: cubic-bezier(0.34, 1.25, 0.64, 1);
+  }
+}
+
+@layer utilities {
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-soft-hover {
+    box-shadow: var(--shadow-soft-hover);
+  }
+
+  .shadow-sticker {
+    box-shadow: var(--shadow-sticker);
+  }
+
+  .ease-out-soft {
+    transition-timing-function: var(--ease-out-soft);
+  }
+
+  .transition-interactive {
+    transition-property: color, background-color, border-color, transform, box-shadow,
+      opacity;
+    transition-duration: 220ms;
+    transition-timing-function: var(--ease-out-soft);
+  }
+
+  .bg-pattern-dots {
+    background-color: var(--color-page);
+    background-image: radial-gradient(
+      rgb(45 180 160 / 0.11) 1.5px,
+      transparent 1.5px
+    );
+    background-size: 20px 20px;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.75s var(--ease-out-soft) forwards;
+}
+
+.animate-reveal-in {
+  animation: reveal-in 0.65s var(--ease-out-soft) forwards;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-in-up,
+  .animate-reveal-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+a,
+button {
+  transition-property: color, background-color, border-color, transform, box-shadow,
+    opacity;
+  transition-duration: 220ms;
+  transition-timing-function: var(--ease-out-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a,
+  button {
+    transition-duration: 0.01ms;
+  }
+}
